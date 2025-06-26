@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preview Logo – Sarina Creatives</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #4f46e5;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .toolbar, .preview-area {
+      max-width: 900px;
+      margin: 1.5rem auto;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .toolbar {
+      background: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .toolbar label {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .toolbar input[type="text"],
+    .toolbar input[type="color"] {
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .toolbar > div {
+      flex: 1;
+      min-width: 160px;
+    }
+
+    .toolbar button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      cursor: pointer;
+      align-self: end;
+    }
+
+    .preview-area {
+      background: #ffffff;
+      text-align: center;
+      border: 2px dashed #cbd5e1;
+    }
+
+    .preview-area svg {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Sarina Creatives – Logo Preview</header>
+
+  <div class="toolbar">
+    <div>
+      <label for="taglineInput">✍️ Tagline</label>
+      <input type="text" id="taglineInput" placeholder="Edit tagline here..." />
+    </div>
+    <div>
+      <label for="bgColorPicker">🌈 Background</label>
+      <input type="color" id="bgColorPicker" value="#ffffff" />
+    </div>
+    <div style="align-self: flex-end;">
+      <button onclick="downloadAsJPEG()">⬇️ Download JPEG</button>
+    </div>
+  </div>
+
+  <div class="preview-area" id="logoPreview">Loading preview...</div>
+
+  <script>
+    function getParam(param) {
+      const url = new URL(window.location.href);
+      return decodeURIComponent(url.searchParams.get(param) || '');
+    }
+
+    const logoPath = getParam("logo");
+    const companyName = getParam("name") || "YOUR BRAND";
+    const companyTagline = getParam("tagline") || "LOGO TEMPLATE";
+
+    const previewDiv = document.getElementById("logoPreview");
+    const taglineInput = document.getElementById("taglineInput");
+    const bgColorPicker = document.getElementById("bgColorPicker");
+
+    fetch(logoPath)
+      .then(res => res.text())
+      .then(svg => {
+        svg = svg.replace(/TECHNOLOGY/g, companyName);
+        svg = svg.replace(/LOGO TEMPLATE/g, companyTagline);
+        previewDiv.innerHTML = svg;
+        updateBackgroundColor(bgColorPicker.value);
+      })
+      .catch(() => {
+        previewDiv.innerHTML = "<p style='color:red;'>❌ Failed to load logo. Check logo path in URL.</p>";
+      });
+
+    taglineInput.addEventListener("input", (e) => {
+      const svgText = previewDiv.querySelectorAll("text");
+      if (svgText.length >= 2) svgText[1].textContent = e.target.value;
+    });
+
+    bgColorPicker.addEventListener("input", (e) => updateBackgroundColor(e.target.value));
+
+    function updateBackgroundColor(color) {
+      previewDiv.style.backgroundColor = color;
+    }
+
+    function downloadAsJPEG() {
+      const svg = previewDiv.querySelector("svg");
+      if (!svg) return alert("SVG not loaded.");
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const viewBox = svg.getAttribute("viewBox");
+      const [minX, minY, width, height] = viewBox ? viewBox.split(" ").map(Number) : [0, 0, 600, 600];
+      const canvas = document.createElement("canvas");
+      const scaleFactor = 3;
+      canvas.width = width * scaleFactor;
+      canvas.height = height * scaleFactor;
+      const ctx = canvas.getContext("2d");
+      const img = new Image();
+      img.onload = function () {
+        ctx.fillStyle = bgColorPicker.value;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        const jpeg = canvas.toDataURL("image/jpeg", 1.0);
+        const a = document.createElement("a");
+        a.href = jpeg;
+        a.download = "sarina-logo.jpg";
+        a.click();
+      };
+      img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData)));
+    }
+  </script>
+
+</body>
+</html>
 
