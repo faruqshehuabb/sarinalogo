@@ -11,52 +11,55 @@
       background: #f8fafc;
       color: #1f2937;
     }
-
     header {
       background: #ffffff;
-      padding: 1rem;
+      padding: 1rem 2rem;
       text-align: center;
       font-weight: bold;
-      font-size: 1.3rem;
       color: #4f46e5;
-      border-bottom: 1px solid #e5e7eb;
+      font-size: 1.3rem;
     }
-
-    .toolbar, .preview-area {
+    .toolbar {
       max-width: 900px;
-      margin: 1.5rem auto;
+      margin: 1rem auto;
+      background: #fff;
       padding: 1rem;
       border-radius: 10px;
-    }
-
-    .toolbar {
-      background: #ffffff;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
-
     .toolbar label {
-      font-weight: bold;
-      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
     }
-
-    .toolbar input[type="text"],
-    .toolbar input[type="color"] {
+    .toolbar input[type="text"], .toolbar input[type="color"] {
       padding: 0.6rem;
       border-radius: 6px;
       border: 1px solid #ccc;
+      font-size: 0.95rem;
       width: 100%;
     }
-
     .toolbar > div {
       flex: 1;
-      min-width: 160px;
+      min-width: 150px;
     }
-
-    .toolbar button {
+    .preview-area {
+      background: #ffffff;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 2px dashed #e2e8f0;
+      text-align: center;
+    }
+    .preview-area svg {
+      max-width: 100%;
+      height: auto;
+    }
+    button {
       background: #4f46e5;
       color: white;
       border: none;
@@ -65,18 +68,7 @@
       font-weight: bold;
       font-size: 0.95rem;
       cursor: pointer;
-      align-self: end;
-    }
-
-    .preview-area {
-      background: #ffffff;
-      text-align: center;
-      border: 2px dashed #cbd5e1;
-    }
-
-    .preview-area svg {
-      max-width: 100%;
-      height: auto;
+      margin-top: 1.3rem;
     }
   </style>
 </head>
@@ -87,23 +79,23 @@
   <div class="toolbar">
     <div>
       <label for="taglineInput">✍️ Tagline</label>
-      <input type="text" id="taglineInput" placeholder="Edit tagline here..." />
+      <input type="text" id="taglineInput" />
     </div>
     <div>
       <label for="bgColorPicker">🌈 Background</label>
       <input type="color" id="bgColorPicker" value="#ffffff" />
     </div>
-    <div style="align-self: flex-end;">
+    <div style="align-self: end;">
       <button onclick="downloadAsJPEG()">⬇️ Download JPEG</button>
     </div>
   </div>
 
-  <div class="preview-area" id="logoPreview">Loading preview...</div>
+  <div class="preview-area" id="logoPreview">Loading...</div>
 
   <script>
-    function getParam(param) {
+    function getParam(name) {
       const url = new URL(window.location.href);
-      return decodeURIComponent(url.searchParams.get(param) || '');
+      return url.searchParams.get(name);
     }
 
     const logoPath = getParam("logo");
@@ -121,17 +113,18 @@
         svg = svg.replace(/LOGO TEMPLATE/g, companyTagline);
         previewDiv.innerHTML = svg;
         updateBackgroundColor(bgColorPicker.value);
+        taglineInput.value = companyTagline;
       })
       .catch(() => {
-        previewDiv.innerHTML = "<p style='color:red;'>❌ Failed to load logo. Check logo path in URL.</p>";
+        previewDiv.innerHTML = "<p style='color:red;'>❌ Failed to load logo. Check the path or internet connection.</p>";
       });
 
-    taglineInput.addEventListener("input", (e) => {
+    taglineInput.addEventListener("input", e => {
       const svgText = previewDiv.querySelectorAll("text");
       if (svgText.length >= 2) svgText[1].textContent = e.target.value;
     });
 
-    bgColorPicker.addEventListener("input", (e) => updateBackgroundColor(e.target.value));
+    bgColorPicker.addEventListener("input", e => updateBackgroundColor(e.target.value));
 
     function updateBackgroundColor(color) {
       previewDiv.style.backgroundColor = color;
@@ -165,4 +158,3 @@
 
 </body>
 </html>
-
