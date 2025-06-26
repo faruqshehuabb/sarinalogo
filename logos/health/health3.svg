@@ -1,0 +1,13 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- DNA Spiral -->
+  <path d="M260,240 C280,270 320,270 340,300 C320,330 280,330 260,360" stroke="#06B6D4" stroke-width="5" fill="none"/>
+  <line x1="270" y1="250" x2="330" y2="250" stroke="#A5F3FC" stroke-width="2"/>
+  <line x1="270" y1="350" x2="330" y2="350" stroke="#A5F3FC" stroke-width="2"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="42" fill="#0E7490" text-anchor="middle" font-family="Helvetica" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="18" fill="#6B7280" text-anchor="middle" font-family="Helvetica">
+    Precision for Your Wellbeing
+  </text>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <path d="M150,200 Q300,100 450,200" fill="none" stroke="#10B981" stroke-width="6"/>
+  <path d="M150,300 Q300,200 450,300" fill="none" stroke="#3B82F6" stroke-width="6"/>
+  <path d="M150,400 Q300,300 450,400" fill="none" stroke="#6366F1" stroke-width="6"/>
+  <text id="companyNameText" x="300" y="500" font-size="64" fill="#111827" text-anchor="middle" font-family="Arial" font-weight="bold">
+   TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="540" font-size="28" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    LOGO TEMPLATE
+  </text>
+</svg>

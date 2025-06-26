@@ -1,0 +1,14 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaves -->
+  <path d="M280,280 Q260,240 300,220 Q280,250 280,280 Z" fill="#34D399"/>
+  <path d="M320,280 Q340,240 300,220 Q320,250 320,280 Z" fill="#10B981"/>
+  <!-- Drop -->
+  <path d="M300,300 Q290,320 300,340 Q310,320 300,300 Z" fill="#6EE7B7"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="40" fill="#065F46" text-anchor="middle" font-family="Georgia" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="18" fill="#6B7280" text-anchor="middle" font-family="Georgia">
+    Pure Botanical Healing
+  </text>
+</svg>

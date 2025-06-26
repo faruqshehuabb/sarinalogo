@@ -1,0 +1,13 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Band -->
+  <rect x="260" y="240" width="80" height="120" rx="20" fill="#C084FC" stroke="#7E22CE" stroke-width="4"/>
+  <!-- Screen -->
+  <rect x="275" y="260" width="50" height="60" rx="10" fill="#A855F7"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="42" fill="#6B21A8" text-anchor="middle" font-family="Arial" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="18" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Track. Improve. Repeat.
+  </text>
+</svg>

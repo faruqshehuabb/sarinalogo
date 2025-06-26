@@ -1,0 +1,17 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="#111827"/>
+
+  <!-- Bike Shape (simplified) -->
+  <circle cx="220" cy="350" r="30" fill="#3B82F6"/>
+  <circle cx="380" cy="350" r="30" fill="#3B82F6"/>
+  <line x1="220" y1="350" x2="300" y2="300" stroke="#FACC15" stroke-width="4"/>
+  <line x1="300" y1="300" x2="380" y2="350" stroke="#FACC15" stroke-width="4"/>
+
+  <!-- Company Name -->
+  <text id="companyNameText" x="300" y="460" font-size="42" fill="#FFFFFF" text-anchor="middle" font-family="Arial" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="500" font-size="18" fill="#9CA3AF" text-anchor="middle" font-family="Arial">
+    LOGO TEMPLATE
+  </text>
+</svg>

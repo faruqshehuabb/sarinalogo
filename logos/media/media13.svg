@@ -1,0 +1,14 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Film Roll -->
+  <rect x="260" y="250" width="80" height="60" fill="#FBBF24" stroke="#92400E" stroke-width="3"/>
+  <line x1="270" y1="250" x2="270" y2="310" stroke="#92400E" stroke-width="2"/>
+  <line x1="290" y1="250" x2="290" y2="310" stroke="#92400E" stroke-width="2"/>
+  <line x1="310" y1="250" x2="310" y2="310" stroke="#92400E" stroke-width="2"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="40" fill="#B45309" text-anchor="middle" font-family="Georgia" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="18" fill="#6B7280" text-anchor="middle" font-family="Georgia">
+    Timeless Reels
+  </text>
+</svg>

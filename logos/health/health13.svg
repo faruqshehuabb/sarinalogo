@@ -1,0 +1,13 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bowl -->
+  <path d="M260,310 Q300,340 340,310 Q340,320 260,320 Q260,310 260,310 Z" fill="#FDE68A"/>
+  <!-- Leaf -->
+  <path d="M300,290 Q280,270 310,260 Q330,270 320,290 Z" fill="#84CC16"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="42" fill="#CA8A04" text-anchor="middle" font-family="Helvetica" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="18" fill="#6B7280" text-anchor="middle" font-family="Helvetica">
+    Nourishment that Heals
+  </text>
+</svg>

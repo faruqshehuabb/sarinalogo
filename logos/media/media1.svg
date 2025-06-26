@@ -1,0 +1,14 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mic Body -->
+  <rect x="280" y="240" width="40" height="80" rx="20" fill="#C026D3"/>
+  <!-- Base -->
+  <rect x="290" y="320" width="20" height="30" fill="#7E22CE"/>
+  <line x1="300" y1="350" x2="300" y2="370" stroke="#7E22CE" stroke-width="4"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="42" fill="#7E22CE" text-anchor="middle" font-family="Verdana" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="18" fill="#6B7280" text-anchor="middle" font-family="Verdana">
+    Where Voices Rise
+  </text>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="#0F172A"/>
+
+  <!-- Shield Shape -->
+  <path d="M300,120 C350,140 400,160 400,240 C400,320 300,420 300,420 C300,420 200,320 200,240 C200,160 250,140 300,120 Z"
+        fill="#3B82F6" stroke="#1E40AF" stroke-width="4"/>
+
+  <!-- Circuit Points -->
+  <circle cx="300" cy="180" r="6" fill="#FACC15"/>
+  <line x1="300" y1="180" x2="300" y2="250" stroke="#FACC15" stroke-width="4"/>
+
+  <!-- Company Name -->
+  <text id="companyNameText" x="300" y="470" font-size="48" fill="white" text-anchor="middle"
+        font-family="Segoe UI, sans-serif" font-weight="bold">TECHNOLOGY</text>
+
+  <!-- Tagline -->
+  <text id="taglineText" x="300" y="510" font-size="20" fill="#CBD5E1" text-anchor="middle"
+        font-family="Segoe UI, sans-serif" letter-spacing="1">LOGO TEMPLATE</text>
+</svg>

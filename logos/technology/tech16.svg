@@ -1,0 +1,14 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Motorcycle minimal shape -->
+  <circle cx="200" cy="300" r="30" fill="#FACC15"/>
+  <circle cx="400" cy="300" r="30" fill="#FACC15"/>
+  <line x1="200" y1="300" x2="400" y2="300" stroke="#3B82F6" stroke-width="6"/>
+  <line x1="300" y1="270" x2="320" y2="230" stroke="#3B82F6" stroke-width="6"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="54" fill="#1F2937" text-anchor="middle" font-family="Arial" font-weight="bold">
+    MOTO FIX
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="24" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Motorcycle Repairs
+  </text>
+</svg>

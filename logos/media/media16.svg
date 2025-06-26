@@ -1,0 +1,13 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bubble -->
+  <path d="M240,260 Q240,230 270,230 H330 Q360,230 360,260 Q360,290 330,290 H270 L250,310 L255,290 Q240,290 240,260 Z" fill="#FCD34D"/>
+  <!-- Star -->
+  <polygon points="300,250 305,260 316,260 308,268 311,280 300,273 289,280 292,268 284,260 295,260" fill="#F59E0B"/>
+
+  <text id="companyNameText" x="300" y="420" font-size="40" fill="#B45309" text-anchor="middle" font-family="Arial" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="18" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Reviews That Shine
+  </text>
+</svg>
