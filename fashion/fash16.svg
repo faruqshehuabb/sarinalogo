@@ -1,0 +1,15 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaf dress shape -->
+  <path d="M300,180 Q260,260 300,340 Q340,260 300,180" fill="#84CC16"/>
+  <circle cx="300" cy="160" r="20" fill="#65A30D"/>
+
+  <!-- Label background -->
+  <rect x="60" y="370" width="480" height="140" rx="30" fill="#ECFCCB"/>
+
+  <text id="companyNameText" x="300" y="430" font-size="48" fill="#365314" text-anchor="middle" font-family="Georgia" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="475" font-size="22" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Nature in Fashion
+  </text>
+</svg>

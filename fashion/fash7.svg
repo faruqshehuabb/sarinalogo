@@ -1,0 +1,18 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scarf swirl -->
+  <path d="M300,200 Q270,250 310,300 Q350,340 320,380" stroke="#A21CAF" stroke-width="10" fill="none"/>
+  <circle cx="300" cy="200" r="20" fill="#C026D3"/>
+
+  <!-- Background rectangle -->
+  <rect x="60" y="350" width="480" height="160" rx="30" fill="#F5D0FE"/>
+
+  <!-- Company Name -->
+  <text id="companyNameText" x="300" y="420" font-size="48" fill="#701A75" text-anchor="middle" font-family="Georgia" font-weight="bold">
+    TECHNOLOGY
+  </text>
+
+  <!-- Tagline -->
+  <text id="taglineText" x="300" y="470" font-size="22" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Wrap in Style
+  </text>
+</svg>

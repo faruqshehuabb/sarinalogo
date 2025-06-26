@@ -1,0 +1,20 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- House roof -->
+  <polyline points="200,300 300,200 400,300" fill="none" stroke="#2563EB" stroke-width="10"/>
+  
+  <!-- House body -->
+  <rect x="230" y="300" width="140" height="120" fill="#93C5FD" stroke="#1E40AF" stroke-width="4"/>
+  
+  <!-- Door -->
+  <rect x="285" y="340" width="30" height="80" fill="#1E3A8A"/>
+  
+  <!-- Company name -->
+  <text id="companyNameText" x="300" y="470" font-size="44" fill="#1F2937" text-anchor="middle" font-family="Arial" font-weight="bold">
+    HOMESTEAD
+  </text>
+
+  <!-- Tagline -->
+  <text id="taglineText" x="300" y="510" font-size="20" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Trusted Real Estate Experts
+  </text>
+</svg>

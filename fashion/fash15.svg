@@ -1,0 +1,18 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shoe base -->
+  <rect x="220" y="240" width="160" height="80" rx="20" fill="#F97316"/>
+  <circle cx="240" cy="280" r="6" fill="#FFF"/>
+  <circle cx="260" cy="280" r="6" fill="#FFF"/>
+  <circle cx="280" cy="280" r="6" fill="#FFF"/>
+  <circle cx="300" cy="280" r="6" fill="#FFF"/>
+
+  <!-- Label background -->
+  <rect x="60" y="370" width="480" height="140" rx="30" fill="#FFEDD5"/>
+
+  <text id="companyNameText" x="300" y="430" font-size="48" fill="#C2410C" text-anchor="middle" font-family="Georgia" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="475" font-size="22" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Walk in Confidence
+  </text>
+</svg>

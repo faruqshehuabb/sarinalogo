@@ -1,0 +1,15 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Diamond shape -->
+  <polygon points="300,150 400,300 300,450 200,300" fill="#EC4899"/>
+  <circle cx="300" cy="300" r="40" fill="#F472B6"/>
+
+  <!-- Label background -->
+  <rect x="60" y="340" width="480" height="160" rx="30" fill="#FCE7F3"/>
+
+  <text id="companyNameText" x="300" y="410" font-size="48" fill="#BE185D" text-anchor="middle" font-family="Georgia" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="460" font-size="22" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Precious Fashion Finds
+  </text>
+</svg>

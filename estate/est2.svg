@@ -1,0 +1,17 @@
+<svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Building -->
+  <rect x="240" y="200" width="120" height="140" fill="#3B82F6"/>
+  <!-- Windows -->
+  <rect x="260" y="220" width="20" height="20" fill="#E0F2FE"/>
+  <rect x="320" y="220" width="20" height="20" fill="#E0F2FE"/>
+  <!-- Trees -->
+  <circle cx="200" cy="300" r="20" fill="#10B981"/>
+  <circle cx="400" cy="300" r="20" fill="#10B981"/>
+
+  <text id="companyNameText" x="300" y="380" font-size="46" fill="#1E293B" text-anchor="middle" font-family="Arial" font-weight="bold">
+    TECHNOLOGY
+  </text>
+  <text id="taglineText" x="300" y="420" font-size="20" fill="#6B7280" text-anchor="middle" font-family="Arial">
+    Live Smart, Live Fresh
+  </text>
+</svg>
