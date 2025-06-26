@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technology Logos - Sarina Creatives</title>
+  <title>Academy Logos - Sarina Creatives</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -51,58 +51,36 @@
   <h1>Pick a Template. Make It Yours. Launch Your Brand with Confidence</h1>
 
   <div class="logo-grid">
-    <!-- Add more as needed -->
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca1.svg')">
-      <img src="../logos/academy/aca1.svg" alt="fash Logo 1" />
+    <!-- Academy Logos -->
+    <div class="logo-box" onclick="selectLogo('logos/academy/aca1.svg')">
+      <img src="logos/academy/aca1.svg" alt="Logo 1" />
     </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca2.svg')">
-      <img src="../logos/academy/aca2.svg" alt="fash Logo 2" />
+    <div class="logo-box" onclick="selectLogo('logos/academy/aca2.svg')">
+      <img src="logos/academy/aca2.svg" alt="Logo 2" />
     </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca3.svg')">
-      <img src="../logos/academy/aca3.svg" alt="fash Logo 3" />
+    <div class="logo-box" onclick="selectLogo('logos/academy/aca3.svg')">
+      <img src="logos/academy/aca3.svg" alt="Logo 3" />
     </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca4.svg')">
-      <img src="../logos/academy/aca4.svg" alt="fash Logo 4" />
+    <div class="logo-box" onclick="selectLogo('logos/academy/aca4.svg')">
+      <img src="logos/academy/aca4.svg" alt="Logo 4" />
     </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca5.svg')">
-      <img src="../logos/academy/aca5.svg" alt="fash Logo 5" />
+    <div class="logo-box" onclick="selectLogo('logos/academy/aca5.svg')">
+      <img src="logos/academy/aca5.svg" alt="Logo 5" />
     </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca6.svg')">
-      <img src="../logos/academy/aca6.svg" alt="fash Logo 6" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca7.svg')">
-      <img src="../logos/academy/aca7.svg" alt="fash Logo 7" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca8.svg')">
-      <img src="../logos/academy/aca8.svg" alt="fash Logo 8" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca9.svg')">
-      <img src="../logos/academy/aca9.svg" alt="fash Logo 9" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca10.svg')">
-      <img src="../logos/academy/aca10.svg" alt="fash Logo 10" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca11.svg')">
-      <img src="../logos/academy/aca11.svg" alt="fash Logo 11" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca12.svg')">
-      <img src="../logos/academy/aca12.svg" alt="fash Logo 12" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca13.svg')">
-      <img src="../logos/academy/aca13.svg" alt="fash Logo 13" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca14.svg')">
-      <img src="../logos/academy/aca14.svg" alt="fash Logo 14" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('../logos/academy/aca15.svg')">
-      <img src="../logos/academy/aca15.svg" alt="fash Logo 15" />
-    </div>
+    <!-- Add the rest... -->
+  </div>
+
   <script>
     function selectLogo(path) {
-      const companyName = localStorage.getItem("companyName") || "Your Brand";
-      localStorage.setItem("selectedLogo", path);
-      localStorage.setItem("companyName", companyName);
-      window.location.href = "../preview.html"; // Redirect to preview
+      const companyName = prompt("Enter Company Name:") || "YOUR BRAND";
+      const tagline = prompt("Enter Tagline:") || "LOGO TEMPLATE";
+
+      const encodedPath = encodeURIComponent(path);
+      const encodedName = encodeURIComponent(companyName);
+      const encodedTagline = encodeURIComponent(tagline);
+
+      // go to preview.html with full info
+      window.location.href = `preview.html?logo=${encodedPath}&name=${encodedName}&tagline=${encodedTagline}`;
     }
   </script>
 
