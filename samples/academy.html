@@ -11,19 +11,16 @@
       background: #f8f9fc;
       color: #333;
     }
-
     h1 {
       text-align: center;
       margin-bottom: 2rem;
       color: #4f46e5;
     }
-
     .logo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 2rem;
     }
-
     .logo-box {
       background: #fff;
       border: 1px solid #ddd;
@@ -34,11 +31,9 @@
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
     }
-
     .logo-box:hover {
       transform: scale(1.05);
     }
-
     .logo-box img {
       width: 100%;
       height: 200px;
@@ -48,10 +43,9 @@
 </head>
 <body>
 
-  <h1>Pick a Template. Make It Yours. Launch Your Brand with Confidence</h1>
+  <h1>Pick a Logo Template for Academy</h1>
 
   <div class="logo-grid">
-    <!-- Academy Logos -->
     <div class="logo-box" onclick="selectLogo('logos/academy/aca1.svg')">
       <img src="logos/academy/aca1.svg" alt="Logo 1" />
     </div>
@@ -61,26 +55,18 @@
     <div class="logo-box" onclick="selectLogo('logos/academy/aca3.svg')">
       <img src="logos/academy/aca3.svg" alt="Logo 3" />
     </div>
-    <div class="logo-box" onclick="selectLogo('logos/academy/aca4.svg')">
-      <img src="logos/academy/aca4.svg" alt="Logo 4" />
-    </div>
-    <div class="logo-box" onclick="selectLogo('logos/academy/aca5.svg')">
-      <img src="logos/academy/aca5.svg" alt="Logo 5" />
-    </div>
-    <!-- Add the rest... -->
+    <!-- Add more logos as needed -->
   </div>
 
   <script>
     function selectLogo(path) {
-      const companyName = prompt("Enter Company Name:") || "YOUR BRAND";
-      const tagline = prompt("Enter Tagline:") || "LOGO TEMPLATE";
+      const name = prompt("Enter your company name:", "Your Brand");
+      const tagline = prompt("Enter your tagline:", "Your Slogan");
 
-      const encodedPath = encodeURIComponent(path);
-      const encodedName = encodeURIComponent(companyName);
-      const encodedTagline = encodeURIComponent(tagline);
+      const fullURL = "https://faruqshehuabb.github.io/sarinalogo/" + path;
 
-      // go to preview.html with full info
-      window.location.href = `preview.html?logo=${encodedPath}&name=${encodedName}&tagline=${encodedTagline}`;
+      const previewURL = `https://faruqshehuabb.github.io/sarinalogo/preview.html?logo=${encodeURIComponent(fullURL)}&name=${encodeURIComponent(name)}&tagline=${encodeURIComponent(tagline)}`;
+      window.location.href = previewURL;
     }
   </script>
 
