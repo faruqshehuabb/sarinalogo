@@ -5,62 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Preview Logo – Sarina Creatives</title>
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #f8fafc;
       color: #1f2937;
     }
+
     header {
-      background: #fff;
-      padding: 1rem;
+      background: #ffffff;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #e5e7eb;
       text-align: center;
+      font-size: 1.3rem;
       font-weight: bold;
       color: #4f46e5;
     }
-    .toolbar, .preview-area {
-      max-width: 900px;
-      margin: 1.5rem auto;
-      padding: 1rem;
-      border-radius: 10px;
-    }
+
     .toolbar {
-      background: #fff;
+      background: #ffffff;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      padding: 1rem 2rem;
+      align-items: center;
       justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
-    .toolbar label {
-      font-weight: bold;
+
+    .toolbar > div {
+      display: flex;
+      flex-direction: column;
       font-size: 0.9rem;
     }
-    .toolbar input[type="text"], .toolbar input[type="color"] {
-      padding: 0.5rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      width: 100%;
+
+    .toolbar label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
     }
-    .toolbar > div { flex: 1; min-width: 160px; }
-    button {
+
+    .toolbar input[type="color"],
+    .toolbar input[type="text"] {
+      padding: 0.6rem;
+      font-size: 0.95rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+    }
+
+    .toolbar button {
       background: #4f46e5;
       color: white;
       border: none;
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
+      cursor: pointer;
       font-weight: bold;
       font-size: 0.95rem;
-      cursor: pointer;
+      margin-top: 1.3rem;
     }
+
+    .toolbar button:hover {
+      background: #4338ca;
+    }
+
     .preview-area {
-      background: #fff;
+      background: #ffffff;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 2px dashed #e2e8f0;
       text-align: center;
-      border: 2px dashed #cbd5e1;
     }
+
     .preview-area svg {
       max-width: 100%;
       height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .toolbar > div,
+      .toolbar button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -90,8 +123,8 @@
       return url.searchParams.get(name);
     }
 
-    const logoParam = getParam("logo"); // e.g. logos/academy/aca1.svg
-    const logoPath = "https://raw.githubusercontent.com/faruqshehuabb/sarinalogo/main/" + logoParam;
+    const logoParam = getParam("logo");
+    const logoPath = `https://raw.githubusercontent.com/faruqshehuabb/sarinalogo/main/${logoParam}`;
     const companyName = getParam("name") || "YOUR BRAND";
     const companyTagline = getParam("tagline") || "LOGO TEMPLATE";
 
