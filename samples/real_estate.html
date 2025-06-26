@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology Logos - Sarina Creatives</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f8f9fc;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #4f46e5;
+    }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .logo-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .logo-box:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Choose a Logo Style That Matches Your Brand Vision – Click to Customize with Your Company Name!</h1>
+
+  <div class="logo-grid">
+    <!-- Add more as needed -->
+    <div class="logo-box" onclick="selectLogo('../logos/estate/est1.svg')">
+        <img src="../logos/estate/est1.svg" alt="fash Logo 1" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est2.svg')">
+        <img src="../logos/estate/est2.svg" alt="fash Logo 2" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est3.svg')">
+        <img src="../logos/estate/est3.svg" alt="fash Logo 3" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est4.svg')">
+        <img src="../logos/estate/est4.svg" alt="fash Logo 4" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est5.svg')">
+        <img src="../logos/estate/est5.svg" alt="fash Logo 5" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est6.svg')">
+        <img src="../logos/estate/est6.svg" alt="fash Logo 6" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est7.svg')">
+        <img src="../logos/estate/est7.svg" alt="fash Logo 7" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est8.svg')">
+        <img src="../logos/estate/est8.svg" alt="fash Logo 8" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est9.svg')">
+        <img src="../logos/estate/est9.svg" alt="fash Logo 9" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est10.svg')">
+        <img src="../logos/estate/est10.svg" alt="fash Logo 10" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est11.svg')">
+        <img src="../logos/estate/est11.svg" alt="fash Logo 11" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est12.svg')">
+        <img src="../logos/estate/est12.svg" alt="fash Logo 12" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est13.svg')">
+        <img src="../logos/estate/est13.svg" alt="fash Logo 13" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est14.svg')">
+        <img src="../logos/estate/est14.svg" alt="fash Logo 14" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est15.svg')">
+        <img src="../logos/estate/est15.svg" alt="fash Logo 15" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/estate/est16.svg')">
+        <img src="../logos/estate/est16.svg" alt="fash Logo 15" />
+      </div>
+      
+      
+
+  <script>
+    function selectLogo(path) {
+      const companyName = localStorage.getItem("companyName") || "Your Brand";
+      localStorage.setItem("selectedLogo", path);
+      localStorage.setItem("companyName", companyName);
+      window.location.href = "../preview.html"; // Redirect to preview
+    }
+  </script>
+
+</body>
+</html>

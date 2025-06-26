@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology Logos - Sarina Creatives</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f8f9fc;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #4f46e5;
+    }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .logo-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .logo-box:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Select the Perfect Logo to Match Your Identity – Edit Instantly!</h1>
+
+  <div class="logo-grid">
+    <!-- Add more as needed -->
+    <div class="logo-box" onclick="selectLogo('../logos/finance/fin1.svg')">
+        <img src="../logos/finance/fin1.svg" alt="finance Logo 1" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin2.svg')">
+        <img src="../logos/finance/fin2.svg" alt="finance Logo 2" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin3.svg')">
+        <img src="../logos/finance/fin3.svg" alt="finance Logo 3" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin4.svg')">
+        <img src="../logos/finance/fin4.svg" alt="finance Logo 4" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin5.svg')">
+        <img src="../logos/finance/fin5.svg" alt="finance Logo 5" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin6.svg')">
+        <img src="../logos/finance/fin6.svg" alt="finance Logo 6" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin7.svg')">
+        <img src="../logos/finance/fin7.svg" alt="finance Logo 7" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin8.svg')">
+        <img src="../logos/finance/fin8.svg" alt="finance Logo 8" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin9.svg')">
+        <img src="../logos/finance/fin9.svg" alt="finance Logo 9" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin10.svg')">
+        <img src="../logos/finance/fin10.svg" alt="finance Logo 10" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin11.svg')">
+        <img src="../logos/finance/fin11.svg" alt="finance Logo 11" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin12.svg')">
+        <img src="../logos/finance/fin12.svg" alt="finance Logo 12" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin13.svg')">
+        <img src="../logos/finance/fin13.svg" alt="finance Logo 13" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin14.svg')">
+        <img src="../logos/finance/fin14.svg" alt="finance Logo 14" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin15.svg')">
+        <img src="../logos/finance/fin15.svg" alt="finance Logo 15" />
+      </div>
+      <div class="logo-box" onclick="selectLogo('../logos/finance/fin16.svg')">
+        <img src="../logos/finance/fin16.svg" alt="finance Logo 16" />
+      </div>
+      
+      
+      
+
+  <script>
+    function selectLogo(path) {
+      const companyName = localStorage.getItem("companyName") || "Your Brand";
+      localStorage.setItem("selectedLogo", path);
+      localStorage.setItem("companyName", companyName);
+      window.location.href = "../preview.html"; // Redirect to preview
+    }
+  </script>
+
+</body>
+</html>
